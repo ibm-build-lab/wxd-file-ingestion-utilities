@@ -6,20 +6,18 @@ import os
 class ElasticsearchWrapper:
     def __init__(self):
         load_dotenv()
-        """        
-        self.es_credentials = {
-            "url": os.getenv("ELASTIC_URL",None),
-            "username": os.getenv("ELASTIC_USERNAME",None),
-            "password": os.getenv("ELASTIC_PASSWORD",None)
-        }
-        print(self.es_credentials)
-        self.client = Elasticsearch(
-            self.es_credentials["url"],
-            basic_auth=(self.es_credentials["username"], self.es_credentials["password"]),
-            verify_certs=False,
-            request_timeout=3600
-        )
-        """
+        # self.es_credentials = {
+        #     "url": os.getenv("ELASTIC_URL",None),
+        #     "username": os.getenv("ELASTIC_USERNAME",None),
+        #     "password": os.getenv("ELASTIC_PASSWORD",None)
+        # }
+        # print(self.es_credentials)
+        # self.client = Elasticsearch(
+        #     self.es_credentials["url"],
+        #     basic_auth=(self.es_credentials["username"], self.es_credentials["password"]),
+        #     verify_certs=False,
+        #     request_timeout=3600
+        # )
         self.client = Elasticsearch(
             "https://b0f8598dcc5145728dd8e5615508cb6f.us-west1.gcp.cloud.es.io:443",
             api_key="****************************************"
