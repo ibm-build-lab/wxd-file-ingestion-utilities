@@ -1,28 +1,28 @@
 'use strict'
 
+// Generate an Elasticsearch API key on the Management page under Security.
 require('array.prototype.flatmap').shim()
 const { Client } = require('@elastic/elasticsearch')
 const client = new Client({
-cloud: { id: '<cloud_id>'},
-auth: { apiKey: '<api_key>' }
+node: '<elasticsearch URL>',
+auth: { apiKey: '<elasticsearch api_key>' } 
 })
+
 const dataset = require('./source_documents.json')
 
 // Create and load the source index
 async function run () {
-await client.indices.create({
+await client.indices.create(
+{
     index: 'knowledge-base-src',
     operations: {
-    mappings: {
-        properties: {
-        title: { type: 'text' },
-        content: { type: 'text' },
-        url: { type: 'text' },
-        source: { type: 'text' },
-        public_record: { type: 'boolean' },
-        objectID: { type: 'text' }
+        mappings: {
+            properties: {
+                title: { type: 'text' },
+                content: { type: 'text' },
+                url: { type: 'text' }        
+            }
         }
-    }
     }
 }, { ignore: [400] })
 
