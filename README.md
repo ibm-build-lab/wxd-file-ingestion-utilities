@@ -11,10 +11,10 @@ This repo contains code and links to utilities to help with file ingestion into 
 Elasticsearch provides helper functions that use their [_bulk API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html) to ingest documents that have been saved in JSON format.
 
 ### Python
-Read [./python/README.md](./python/README.md) for details on running a [python script](./python/elastic_ingest.py) to ingest a JSON file
+Read the [python README](./python/README.md) for details on running a [python script](./python/doc_ingest.py) to ingest a JSON file
 
 ### Javascript
-Read [./javascript/README.md](./javascript/README.md) for details on running a [javascript](./javascript/js_ingest.py) to ingest a JSON file
+Read the [javascript README](./javascript/README.md) for details on running a [javascript](./javascript/doc_ingest.js) to ingest a JSON file
 
 ## Use ElasticSearch apis
 See steps here [Working with PDF and Office Documents in Elasticsearch](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/docs/elasticsearch-install-and-setup/how_to_index_pdf_and_office_documents_elasticsearch.md)
