@@ -29,9 +29,9 @@ python3 doc_ingest.py
 ## Next steps to create document embeddings
 
 ### Create a destination index if it doesn't exist
-```
 Run the following in the Elastisearch `Dev Tools` console, adjust to match your JSON document format:
 
+```
 PUT /knowledge_base_dest
 {
   "mappings": {
