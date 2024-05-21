@@ -22,7 +22,7 @@ Once the data has been loaded, verify it either manually or programmatically. In
 
 ### Create a destination index
 
-Use the same schema as the source index but with a field to store the content embeddings.  Enter the following and hit the **>** run icon:
+To create a destination index use the same schema as the source index but with a field to store the content embeddings.  Using the **Kibana Dev Tools Console**, enter the following and hit the **>** run icon:
 
     PUT /knowledge-base-dest
     {
