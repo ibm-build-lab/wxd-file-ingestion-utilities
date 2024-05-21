@@ -1,15 +1,18 @@
-# Python helper to ingest a JSON document file
 
-To run `elastic_ingest.py` do the following: 
+# Python utility to bulk load data into Elasticsearch
 
-## Clone repo
+This utility will create a source index and load data from a file containing an array of JSON objects. 
 
-- Change lines 24 and 25 in `elastic_ingest.py` to add your Elastic cloud url and API key. 
+It is assumed that you have an instance of **watsonx Discovery** provisioned and set up with **Kibana** and **Enterprise** search.  
+For steps to do this see https://cloud.ibm.com/docs/databases-for-elasticsearch?topic=databases-for-elasticsearch-tutorial-elasticsearch-enterprise-search-tutorial.
+
+## Clone directory and run utility
+
+Create an Elasticsearch API key. Within **Kibana**, go to **Management** page under **Security**.
+
+- Change lines 24 and 25 in `doc_ingest.py` to add your Elastic cloud url and API key. 
 - Change line 95 to location of JSON file containing documents
 - On Lines 99-104 adjust fields to match the format of JSON document object
-
-Eventually these need to be environment variables added to .env
-
 
 ## Set up python environment
 
@@ -21,9 +24,11 @@ source assetEnv/bin/activate
 
 ## Run code to bulk ingest
 ```
-python3 python3 elastic_ingest.py
+python3 doc_ingest.py
 ```
-## Create a destination index if it doesn't exist
+## Next steps to create document embeddings
+
+### Create a destination index if it doesn't exist
 ```
 Run the following in the Elastisearch `Dev Tools` console, adjust to match your JSON document format:
 
@@ -41,7 +46,7 @@ PUT /knowledge_base_dest
   }
 }
 ```
-## Create the ingestion pipeline
+### Create the ingestion pipeline
 Run the following in the Elastisearch `Dev Tools` console:
 ```
 PUT _ingest/pipeline/elser-tokens-creation
@@ -77,7 +82,7 @@ PUT _ingest/pipeline/elser-tokens-creation
  ]
 }
 ```
-## Re index from source to destination index running it thru the pipeline
+### Re index from source to destination index running it thru the pipeline
 
 Once the source has been ingested using the `elastic_ingest.py`. Enter the following into the Elasticsearch `Dev Tools` console and run it:
 ```
@@ -101,7 +106,7 @@ To see the progress of the embedding
 GET _tasks/<task_id>
 
 ```
-## Optional
+### Optional
 To delete documents from an index
 ```
 POST /knowledge_base_dest/_delete_by_query
