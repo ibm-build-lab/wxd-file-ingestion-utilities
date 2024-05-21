@@ -1,5 +1,5 @@
 # watsonx Discovery Document Ingestion Utilities
-This repo contains code and links to utilities to help with file ingestion into watsonx Discovery (Elasticsearch)
+This repo contains code and links to utilities to help with file ingestion into **watsonx Discovery** (Note that **watsonx Discovery** is synonymous with **Elasticsearch**)
 
 ##  RAG-LLM utility ingestDocs API
 [RAG-LLM](https://github.com/ibm-build-lab/RAG-LLM-Service) is an application that can be started locally, in Code Engine, or on an OpenShift cluster. There is [terraform automation code](https://github.com/ibm-build-lab/rag-codeengine-terraform-setup) to help deploy this into Code Engine on IBM Cloud.  This application produces 2 different apis: `ingestDocs` and `queryLLM`. 
@@ -16,7 +16,7 @@ Read the [python README](./python/README.md) for details on running a [python sc
 ### Javascript
 Read the [javascript README](./javascript/README.md) for details on running a [javascript](./javascript/doc_ingest.js) to ingest a JSON file
 
-## Use ElasticSearch apis
+## Use Elasticsearch apis
 See steps here [Working with PDF and Office Documents in Elasticsearch](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/docs/elasticsearch-install-and-setup/how_to_index_pdf_and_office_documents_elasticsearch.md)
 
 ## Additional utilities
