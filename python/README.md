@@ -25,9 +25,9 @@ python3 python3 elastic_ingest.py
 ```
 ## Create a destination index if it doesn't exist
 ```
-Run the following in the Elastisearch `Dev Tools` console:
+Run the following in the Elastisearch `Dev Tools` console, adjust to match your JSON document format:
 
-PUT /juniper_knowledge_base_dest
+PUT /knowledge_base_dest
 {
   "mappings": {
     "properties": {
@@ -84,11 +84,11 @@ Once the source has been ingested using the `elastic_ingest.py`. Enter the follo
 POST _reindex?wait_for_completion=false
 {
  "source": {
-  "index": "juniper_knowledge_base_src",
+  "index": "knowledge_base_src",
   "size": 200
  },
  "dest": {
-  "index": "juniper_knowledge_base_dest",
+  "index": "knowledge_base_dest",
   "pipeline": "elser-tokens-creation",
   "op_type": "create"
   },
@@ -104,7 +104,7 @@ GET _tasks/<task_id>
 ## Optional
 To delete documents from an index
 ```
-POST /juniper_knowledge_base_dest/_delete_by_query
+POST /knowledge_base_dest/_delete_by_query
 {
   "query": {
     "match_all": {
