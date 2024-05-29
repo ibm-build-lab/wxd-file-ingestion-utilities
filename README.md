@@ -4,10 +4,10 @@ This repo contains code and links to utilities to help with file ingestion into 
 ##  RAG-LLM utility ingestDocs API
 [RAG-LLM](https://github.com/ibm-build-lab/RAG-LLM-Service) is an application that can be started locally, in Code Engine, or on an OpenShift cluster. There is [terraform automation code](https://github.com/ibm-build-lab/rag-codeengine-terraform-setup) to help deploy this into Code Engine on IBM Cloud.  This application produces 2 different apis: `ingestDocs` and `queryLLM`. 
 
-## LlamaIndex document ingestion utility
+## LlamaIndex document ingestion script
 [watsonx Discovery setup and ingestion](https://github.com/ibm-build-lab/watsonx-wxd-setup-and-ingestion) is a python application that uses the LlamaIndex framework to ingest and chunk documents (located locally or in COS) into an Elasticsearch instance. This utility can ingest multiple documents of type `.pdf`, `.txt`, `.docx`, and `.pptx` at one time.
 
-## Elasticsearch helper functions
+## Elasticsearch helper function scripts
 Elasticsearch provides helper functions that use their [_bulk API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html) to ingest documents that have been saved in JSON format.
 
 ### Python
