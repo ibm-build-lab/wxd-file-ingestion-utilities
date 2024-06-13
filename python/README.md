@@ -29,7 +29,7 @@ python3 doc_ingest.py
 ## Optional: steps to create document embeddings for ingested data
 
 ### Create a destination index if it doesn't exist
-Run the following in the Elastisearch `Dev Tools` console, adjust to match your JSON document format:
+Run the following in the Elasticsearch `Dev Tools` console, adjust to match your JSON document format:
 
 ```
 PUT /knowledge_base_dest
@@ -82,7 +82,7 @@ PUT _ingest/pipeline/elser-tokens-creation
  ]
 }
 ```
-### Re index from source to destination index running it thru the pipeline
+### Re-index from source to destination index running it thru the pipeline
 
 Once the source has been ingested using the `elastic_ingest.py`. Enter the following into the Elasticsearch `Dev Tools` console and run it:
 ```
