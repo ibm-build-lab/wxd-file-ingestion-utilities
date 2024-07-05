@@ -4,11 +4,11 @@
 This utility will create a source index and load data from a file containing an array of JSON objects. 
 
 It is assumed that you have an instance of **watsonx Discovery** provisioned and set up with **Kibana** and **Enterprise** search.  
-For steps to do this see https://cloud.ibm.com/docs/databases-for-elasticsearch?topic=databases-for-elasticsearch-tutorial-elasticsearch-enterprise-search-tutorial.
+For steps to do this see https://github.com/ibm-build-lab/terraform-elasticsearch-setup.
 
 ## Clone directory and run utility
 
-Create an Elasticsearch API key. Within **Kibana**, go to **Management** page under **Security**.
+Create an Elasticsearch API key: within **Kibana**, go to **Management** page under **Security**.
 
 - Change lines 24 and 25 in `doc_ingest.py` to add your Elastic cloud url and API key. 
 - Change line 95 to location of JSON file containing documents
