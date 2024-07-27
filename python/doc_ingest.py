@@ -90,17 +90,4 @@ if __name__ == "__main__":
             }
         }
     })
-    es_wrapper.load_and_index_documents("knowledge_base_src", "./knowledge_base_results.json")
-    # es_wrapper.create_index("knowledge_base_dest", {
-    #     "mappings": {
-    #         "properties": {
-    #             "text": {"type": "text"},
-    #             "chunk_number": {"type": "integer"},
-    #             "embedding": {"type": "sparse_vector"},
-    #             "url": {"type": "text"},  
-    #             "article_metadata": {"type": "text"},  
-    #             "article_content": {"type": "text"}  
-    #         }
-    #     }
-    # })
-    
+    es_wrapper.load_and_index_documents("knowledge_base_src", "./knowledge_base_docs.json")    
