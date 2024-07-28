@@ -86,7 +86,7 @@ if __name__ == "__main__":
                 "chunk_number": {"type": "integer"},
                 "url": {"type": "text"},  
                 "article_metadata": {"type": "text"},  
-                "article_content": {"type": "text"}  
+                "main_content": {"type": "text"}  
             }
         }
     })
