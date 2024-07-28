@@ -49,7 +49,7 @@ python3 doc_ingest.py
 ## Optional: steps to create document embeddings for ingested data
 
 ### Create a destination index if it doesn't exist
-Run the following in the Elasticsearch `Dev Tools` console, adjust to match your JSON document format:
+Run the following in the Elasticsearch `Dev Tools` console, adjust to match your document format:
 
 ```
 PUT /knowledge_base_dest
