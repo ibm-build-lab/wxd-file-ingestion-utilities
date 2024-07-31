@@ -22,6 +22,8 @@ See steps here [Working with PDF and Office Documents in Elasticsearch](https://
 ## Additional utilities
 A couple of other methods and utilities:
 
+[Elastic documentation on how to ingest data](https://www.elastic.co/docs/current/serverless/elasticsearch/ingest-your-data)
+
 [Set up a web crawler with Neuralseek](https://github.ibm.com/skol-assets/watsonx-RAG-w-watsonxdiscovery-method1)
 
 [File ingestion from Cloud Object Storage, using python notebooks in watsonx.ai environment](https://github.ibm.com/skol-assets/watsonx-RAG-w-watsonxdiscovery-method2)
