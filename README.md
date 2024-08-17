@@ -2,7 +2,10 @@
 This repo contains code and links to utilities to help with file ingestion into **watsonx Discovery** (Note that **watsonx Discovery** is synonymous with **Elasticsearch**)
 
 ##  RAG-LLM utility ingestDocs API
-[RAG-LLM](https://github.com/annumberhocker/RAG-LLM-App) is an application that can be started locally, in Code Engine, or on an OpenShift cluster. There is [terraform automation code](https://github.com/annumberhocker/RAG-LLM-App/codeengine-terraform-setup) to help deploy this into Code Engine on IBM Cloud.  This application produces 2 different apis: `ingestDocs` and `queryLLM`. 
+[RAG-LLM](https://github.com/annumberhocker/RAG-LLM-App) is an application that can be started locally, in Code Engine, or on an OpenShift cluster. There is [terraform automation code](https://github.com/annumberhocker/RAG-LLM-App/codeengine-terraform-setup) to help deploy this into Code Engine on IBM Cloud.  This application includes 3 different apis: 
+- `ingestDocs`: ingest documents of different types from a Cloud Object Storage bucket.
+- `queryLLM`: retrieve documents from an Elasticsearch index and send them into LLM for natural language response
+- `queryWDLLM`: retrieve documents from a Watson Discovery Collection and send them into LLM for natural language response
 
 ## LlamaIndex document ingestion script
 [watsonx Discovery setup and ingestion](https://github.com/ibm-build-lab/watsonx-wxd-setup-and-ingestion) is a python application that uses the LlamaIndex framework to ingest and chunk documents (located locally or in COS) into an Elasticsearch instance. This utility can ingest multiple documents of type `.pdf`, `.txt`, `.docx`, and `.pptx` at one time.
