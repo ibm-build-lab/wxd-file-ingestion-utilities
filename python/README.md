@@ -16,7 +16,7 @@ dictionary containing newline JSON objects with the chunks. These are then inges
 Create an Elasticsearch API key: within **Kibana**, go to **Management** page under **Security**.
 
 - Change lines 24 and 25 in `doc_ingest.py` to add your Elastic cloud url and API key. 
-- Change line 95 to location of JSON file containing documents
+- Change line 93 to location of JSON file containing documents
 - Change line 67 to whatever chunk overlap you want (i.e. for a 512 chunk size, overlap of 128 is 25%)
 - On Lines 99-104 adjust fields to match the format of JSON document object. This code expects JSON documents in the form of
   ```
