@@ -51,11 +51,11 @@ python3 doc_ingest.py
 The resulting document format will be:
 ```
 {
-   "text": {"type": "text"},
-   "chunk_number": {"type": "integer"},
-   "url": {"type": "text"},  
-   "article_metadata": {"type": "text"},  
-   "main_content": {"type": "text"}  
+   "text": "<chunk text>",
+   "chunk_number": <chunk_number>,
+   "URL": "<URL of document containing this chunk>",  
+   "article_metadata": "<metadata of included>",  
+   "main_content": "<full document text>"  
 }
 ```
 ## Optional: steps to create document embeddings for ingested data
