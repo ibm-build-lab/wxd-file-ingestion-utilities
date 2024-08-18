@@ -43,8 +43,20 @@ source assetEnv/bin/activate
 ```
 
 ## Run code to bulk ingest
+This script chunks and ingests the documents. It adds the chunk text into the `text` field and retains the entire document content in the `main_content` field. It does not create text embeddings. That is done in the next step:
 ```
 python3 doc_ingest.py
+```
+
+The resulting document format will be:
+```
+{
+   "text": {"type": "text"},
+   "chunk_number": {"type": "integer"},
+   "url": {"type": "text"},  
+   "article_metadata": {"type": "text"},  
+   "main_content": {"type": "text"}  
+}
 ```
 ## Optional: steps to create document embeddings for ingested data
 
@@ -57,12 +69,12 @@ PUT /knowledge_base_dest
   "mappings": {
     "properties": {
        "text": {"type": "text"},
-        "chunk_number": {"type": "integer"},
-        "embedding": {"type": "sparse_vector"},
-        "url": {"type": "text"},  
-        "article_metadata": {"type": "text"},  
-        "main_content": {"type": "text"}  
-      }
+       "chunk_number": {"type": "integer"},
+       "embedding": {"type": "sparse_vector"},
+       "url": {"type": "text"},  
+       "article_metadata": {"type": "text"},  
+       "main_content": {"type": "text"}  
+    }
   }
 }
 ```
