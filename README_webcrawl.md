@@ -1,6 +1,6 @@
-# Setup a web crawl index on watson<x>x</x> Discovery
+# Setup a web crawl index on watson<x>x</x> Discovery (ElasticSearch)
 **NOTE:** These instructions assume:
-- you have provisioned an instance of watsonx Discovery (ElasticSearch) on your account. For automation to do this, see [Elastic + Kibana + Enterprise Search deployment](https://github.com/ibm-build-lab/terraform-elasticsearch-setup)
+- you have provisioned an instance of **watsonx Discovery** (ElasticSearch) on your account. For automation to do this, see [Elastic + Kibana + Enterprise Search deployment](https://github.com/ibm-build-lab/terraform-elasticsearch-setup)
 - the ELSER v2 model `.elser_model_2_linux-x86_64` has been downloaded and deployed into your ElasticSearch instance. To verify this, go to **Analytics** -> **Machine Learning** -> **Trained Models**.
 
 Elastic Learned Sparse EncodeR --or ELSER-- is an NLP model trained by Elastic that enables you to perform semantic search by using sparse vector representation. Instead of literal matching on search terms, semantic search retrieves results based on the intent and the contextual meaning of a search query.
@@ -153,13 +153,13 @@ Since certain web pages provide a large amount of data on a single page, it is b
 6.  Once documents start coming in, you can verify that the model is working correctly by switching to the **Documents** tab within the index and expanding a document. Look for the **passages** field and ensure that it has a list of tokens similar to the screenshot below.
     ![Tokens](./assets/ml_tokens_doc.png)
 
-Allow some time for the crawler to index the site. This could be anywhere from a few minutes to several hours depend on the number of domains and size of the site. In the meantime, we can continue to the next step to tie watson<x>x</x> Assistant and watson<x>x</x> Discovery together for Conversation Search.
+Allow some time for the crawler to index the site. This could be anywhere from a few minutes to several hours depend on the number of domains and size of the site. In the meantime, we can continue to the next step to tie **watsonx Assistant** and **watsonx Discovery** together for Conversation Search.
 
 ## Connect watson<x>x</x> Discovery to watson<x>x</x> Assistant
 
-Now that watson<x>x</x> Discovery is ingesting data from the web crawler, it is time to setup Conversational Search for watson<x>x</x> Assistant. Navigate to [your IBM Cloud account](https://cloud.ibm.com/resources) and search for `assistant`. If this is the first time accessing the Assistant, then create a new Assistant by following the prompts on the page.
+Now that **watsonx Discovery** is ingesting data from the web crawler, it is time to setup Conversational Search for **watsonx Assistant**. Navigate to [your IBM Cloud account](https://cloud.ibm.com/resources) and search for `assistant`. If this is the first time accessing the Assistant, then create a new Assistant by following the prompts on the page.
 
-Once an Assistant is created, follow these steps to connect watson<x>x</x> Discovery and enable Conversational Search.
+Once an Assistant is created, follow these steps to connect **watsonx Discovery** and enable Conversational Search.
 
 1.  Go to the Environments Section and add a Search extension for the Draft environment.
     ![Assistant Environments](./assets/assistant_env.png)
@@ -167,7 +167,7 @@ Once an Assistant is created, follow these steps to connect watson<x>x</x> Disco
     ![Search Option](./assets/assistant_search_choice.png)
 3.  Enter the details for **watsonx Discovery**
 
-    1.  Enter the watson<x>x</x> Discovery URL information. You can find this by opening up the Elasticsearch Database service and look under the HTTPS endpoints.  Be sure to add `https://` to the provided endpoint, i.e. `https://<es_url>`
+    1.  Enter the **watsonx Discovery** URL information. You can find this by opening up the Elasticsearch Database service and look under the HTTPS endpoints.  Be sure to add `https://` to the provided endpoint, i.e. `https://<es_url>`
     2.  Enter the port provided.
     3.  Enter the index that was created in the previous section.
     4.  Choose `Basic authentication:`
@@ -181,7 +181,7 @@ Once an Assistant is created, follow these steps to connect watson<x>x</x> Disco
     3.  **URL (optional)**: `url`
         Enable the **Conversational Search** toggle to showcase generative AI in action.
         ![Index Details](./assets/assistant_wxd_index.png)
-6.  Before finishing the setup, we need to ensure that watson<x>x</x> Assistant uses the semantic search capabilities of watson<x>x</x> Discovery. To do this, expand the **Advanced Elasticsearch settings** section and add the following JSON code into the query body section.
+6.  Before finishing the setup, we need to ensure that **watsonx Assistant** uses the semantic search capabilities of **watsonx Discovery**. To do this, expand the **Advanced Elasticsearch settings** section and add the following JSON code into the query body section.
 
     ```json
     {
@@ -216,4 +216,4 @@ Once an Assistant is created, follow these steps to connect watson<x>x</x> Disco
 
 # Conclusion
 
-By following these steps, we have created a demo environment that uses watson<x>x</x> Discovery as a knowledge base and connected it to watson<x>x</x> Assistant for a conversational search use case. You can read more about the conversational search capabilities [here](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-conversational-search). To read more about semantic search, go [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/semantic-search-elser.html).
+By following these steps, we have created a demo environment that uses **watsonx Discovery** as a knowledge base and connected it to **watsonx Assistant** for a conversational search use case. You can read more about the conversational search capabilities [here](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-conversational-search). To read more about semantic search, go [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/semantic-search-elser.html).
