@@ -24,8 +24,7 @@ See steps here [Working with PDF and Office Documents in Elasticsearch](https://
 
 ## Webcrawling
 
-- [Using web crawler in Elasticsearch, ELSER v1](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/docs/elasticsearch-install-and-setup/how_to_use_web_crawler_in_elasticsearch.md)
-- [Using web crawler in Elasticsearch, ELSER v2 (IBM internal only)](https://pages.github.ibm.com/Jason-Leiby/watsonx-discovery-docs/setup_webcrawl)
+- [Using web crawler in Elasticsearch](./README_webcrawl.md)
 - [Using external tools to scrape websites (turn websites into documents in JSON format, then use python or javascript above to ingest)](https://github.com/ibm-build-lab/webcrawling-scripts/blob/main/README.md)
 
 ## Additional utilities
