@@ -161,9 +161,9 @@ Now that watson<x>x</x> Discovery is ingesting data from the web crawler, it is 
 Once an Assistant is created, follow these steps to connect watson<x>x</x> Discovery and enable Conversational Search.
 
 1.  Go to the Environments Section and add a Search extension for the Draft environment.
-    ![Assistant Environments](./assets/assitant_env.png)
+    ![Assistant Environments](./assets/assistant_env.png)
 2.  Select the Elastic Search option in the window that opens.
-    ![Search Option](./assets/assitant_search_choice.png)
+    ![Search Option](./assets/assistant_search_choice.png)
 3.  Enter the details for watsonx Discovery. All of this information can be found in the Techzone Reservation, so ensure that this window is open and available. The following list goes in order of what is needed for the Assistant to connect.
 
     1.  Enter the watson<x>x</x> Discovery URL information.
@@ -176,7 +176,7 @@ Once an Assistant is created, follow these steps to connect watson<x>x</x> Disco
     3.  Enter the index that was created in the previous section.
     4.  Provide the username that you used to login to Kibana.
     5.  Provide the password used previously.
-        ![watsonx Discovery credentials](./assets/assitant_wxd_details.png)
+        ![watsonx Discovery credentials](./assets/assistant_wxd_details.png)
 
 4.  Once the necessary information has been provided, click the **Next** button in the upper right.
 5.  In this section, provide the following values for each of the fields required. This is standard for a web crawl index.
@@ -184,7 +184,7 @@ Once an Assistant is created, follow these steps to connect watson<x>x</x> Disco
     2.  **Body**: `text`
     3.  **URL (optional)**: `url`
         Enable the ==Conversational Search== feature to showcase generative AI in action.
-        ![Index Details](./assets/assitant_wxd_index.png)
+        ![Index Details](./assets/assistant_wxd_index.png)
 6.  Before finishing the setup, we need to ensure that watson<x>x</x> Assistant uses the semantic search capabilities of watson<x>x</x> Discovery. To do this, expand the **Advanced Elasticsearch settings** section and add the following JSON code into the query body section.
 
     ```json
@@ -210,7 +210,7 @@ Once an Assistant is created, follow these steps to connect watson<x>x</x> Disco
     ??? Note
         Please note the model that is deployed for your service by looking at the Analytics -> Machine Learning -> Trained Models section. Verify whether the **.elser_model_2** or the **.elser_model_2_linux-x86_64** model is deployed.
 
-    ![Query Body](./assets/assitant_wxd_query.png)
+    ![Query Body](./assets/assistant_wxd_query.png)
 
     Click **Finish** in the upper right to save the configuration.
 
@@ -219,9 +219,9 @@ Once an Assistant is created, follow these steps to connect watson<x>x</x> Disco
 
 7.  With the search extension in place, move to the **Actions** section of the Assistant, then navigate to the ==Set by Assistant== actions. Choose the **No action matches**.
 8.  Delete all of the steps within the action and create a new one. In the ==And then== section, choose **Search for the answer**. Click save and exit.
-    ![No Match](./assets/assitant_no_match_step.png)
+    ![No Match](./assets/assistant_no_match_step.png)
 9.  Now it is time to test the connection. Open the preview section or the preview button in the lower right if you are still in the actions window. Type in a question relevant to the content that was crawled. Since no other actions have been created at this time, the Assistant will default to searching for an answer. You should be able to see a generative response if the ==Conversational Search== feature was enabled; otherwise, you will see a list of relevant documents that contain information about your question.
-    ![Search response](./assets/assitant_cs_response.png)
+    ![Search response](./assets/assistant_cs_response.png)
 
 # Conclusion
 
