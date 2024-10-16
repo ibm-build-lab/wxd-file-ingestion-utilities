@@ -1,4 +1,4 @@
-## Setup a web crawl index on watson<x>x</x> Discovery
+# Setup a web crawl index on watson<x>x</x> Discovery
 **NOTE:** These instructions assume:
 - you have provisioned an instance of watsonx Discovery (ElasticSearch) on your account. For automation to do this, see [Elastic + Kibana + Enterprise Search deployment](https://github.com/ibm-build-lab/terraform-elasticsearch-setup)
 - the ELSER v2 model `.elser_model_2_linux-x86_64` has been downloaded and deployed into your ElasticSearch instance. To verify this, go to **Analytics** -> **Machine Learning** -> **Trained Models**.
