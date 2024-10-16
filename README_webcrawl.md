@@ -108,7 +108,7 @@ Since certain web pages provide a large amount of data on a single page, it is b
 
         Click `Add Processor` in the bottom right corner to save it.
 
-    2.  Click `Add a processor` in the main window and select a type of `Foreach`.
+    2.  Click `Add a processor` again right below the script processor you just created (don't select the `Add Processer` link under the `Failure Processors`) and select a type of `Foreach`.
        
         Specify `passages` to as the `Field`, then add the following JSON config to the `Processors` field.
 
