@@ -24,7 +24,8 @@ See steps here [Working with PDF and Office Documents in Elasticsearch](https://
 
 ## Webcrawling
 
-- [Using web crawler in Elasticsearch](./README_webcrawl.md)
+- [Using simple web crawler in Elasticsearch](./README_webcrawl_simple.md)
+- [Using web crawler with chunking preprocessors in Elasticsearch](./README_webcrawl.md)
 - [Using external tools to scrape websites (turn websites into documents in JSON format, then use python or javascript above to ingest)](https://github.com/ibm-build-lab/webcrawling-scripts/blob/main/README.md)
 
 ## Additional utilities
