@@ -152,7 +152,7 @@ https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrat
 
 ## Conclusion 
 
-By following these steps, we have created an environment that uses **watsonx Discovery (ElasticSearch)** as a knowledge base and connected it to **watsonx Assistant** for a conversational search use case. You can read more about the conversational search capabilities [here](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-conversational-search). To read more about semantic search, go here. 
+By following these steps, we have created an environment that uses **watsonx Discovery (ElasticSearch)** as a knowledge base and connected it to **watsonx Assistant** for a conversational search use case. You can read more about the conversational search capabilities [here](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-conversational-search). To read more about semantic search, go [here](https://ibm.ent.box.com/folder/253751253370?s=9m5vr25cws6ivlqvmg4q68h8d03twxp8). 
 
  
 Copyright © 2024 IBM Technology Sales
