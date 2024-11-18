@@ -139,6 +139,21 @@ GET _tasks/<task_id>
 
 ```
 ### Optional
+
+To search against your index:
+```
+GET knowledge_base_dest/_search
+{
+    "query":{
+        "text_expansion":{
+            "ml.content_embedding":{
+                "model_id":".elser_model_2_linux-x86_64",                  
+                "model_text":"<query>"
+            }
+        }
+    }
+}
+```
 To delete documents from an index
 ```
 POST /knowledge_base_dest/_delete_by_query
