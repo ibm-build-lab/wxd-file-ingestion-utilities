@@ -95,7 +95,7 @@ PUT _ingest/pipeline/elser-tokens-creation
       ]
     }
    }
-  }],
+  ],
  "on_failure": [
   {
    "set": {
